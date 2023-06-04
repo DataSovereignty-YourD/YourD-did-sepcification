@@ -10,8 +10,8 @@ We have identified three fundamental components for constructing Web3 services: 
 ## Goal
 We will **ignite a revolution in digital data ownership**, which will be the cornerstone of the forthcoming Fourth Industrial Revolution and the fundamental rule of the digital world going forward 
 ## YourD DID Identifier Syntax
-DID Method Name: YourD<br>
-DID Method Specific Identifier: We provide a DID (Decentralized Identifier) specification identifier based on blockchain accounts.<br>
+- **DID Method Name**: YourD<br>
+- **DID Method Specific Identifier**: We provide a DID (Decentralized Identifier) specification identifier based on blockchain accounts.<br>
 The method identifier in YourD follows the format: **[blockchain identifier]:[network identifier]:[blockchain account]**. The blockchain identifier represents the specific blockchain being used, such as Ethereum, Klaytn, Tezos, and others. The network identifier refers to the network associated with the blockchain, which can be mainnet, testnet, or other designated networks. The blockchain account represents the supported account type in the blockchain.
 
 To align with the DID specification, we can express it in a more concise and standardized format as follows:
@@ -36,7 +36,7 @@ In a blockchain-based identity management system, these key types can be used as
 ## YourD DID Document
 
 The basic structure of a DID document in YourD is as follows:
-```
+```json
 {
    "@context":[
       "https://www.w3.org/ns/did/v1",
@@ -71,9 +71,46 @@ This JSON object is a Decentralized Identifier (DID) Document, conforming to the
 - `assertionMethod`: This property includes an array of IDs for verification methods that can be used to make claims or signatures using this DID.
 
 For detailed information on the DID Document, you can refer to the W3C's DID Specification document.
-## Operation
-## Privacy / Security Consideration
-블록체인 네트워크에서 제공되는 Ed25519 keys, Secp256k1 keys, NIST P256 keys는 현재 많은 디지털 신원(ID) 프로토콜과 표준에서 사용되는 키 유형입니다. 이러한 키들은 안전하고 강력한 암호학적 기능을 제공하여 신뢰할 수 있는 디지털 신원을 만들 수 있습니다.
+## CRUD Operation 
+### Create/Register
+The YourD DID JavaScript library enables the creation of Decentralized Identifiers (DIDs). The generated DID and associated DID Document are stored within the YourD application. Upon creation of a DID, relevant metadata is registered on the blockchain. This metadata, preserved on the blockchain, allows for the verification of the integrity of the DID Document during data access or updates.
 
-블록체인 기반의 신원 관리 시스템에서 이러한 키 유형을 사용하여 DID(Distributed Identifier)의 일부로 사용할 수 있습니다. DID는 고유한 식별자로서, 특정 개체(개인, 조직, 자산 등)의 디지털 신원을 나타냅니다. DID는 블록체인 네트워크의 account와 연결되어 있으며, 이를 통해 신원 검증과 디지털 자산 소유를 관리할 수 있습니다.
+### Read
+The YourD DID method supports two functionalities: resolver and dereferencer.
+- `resolve`: The resolver's resolve function permits holders to access their DID Documents held in the private data registry via their YourD DID. This function embodies the read operation on the decentralized identity infrastructure, aligning with the guidelines set forth in the W3C DID Specification. This ensures secure and standardized access to individual DID Documents, further cementing the decentralized nature of identity management facilitated by the YourD DID method.
+- `derefererence`: The dereference functionality provided by YourD allows for retrieval of specific property values from the YourD DID Document through a DID URL. For instance, a specific value such as the service endpoint from the service attribute within a holder's DID Document can be obtained.
+### Dereference Example
+```json
+{
+   "dereferencingMetadata":{
+      "contentType":"application/ld+json"
+   },
+   "contentStream":{
+      "resource":{
+         "data":"https://agent.example.com?service=files&relativeRef=%2Fmyresume%2Fdoc%3Fversion%3Dlatest#frag",
+         "type":"ServiceEndpoint"
+      }
+   },
+   "contentMetadata":{
+      "created": "20XX-0X-23T0X:XX:XXZ(example)",
+      "updated": "20XX-0X-23T0X:XX:XXZ(example)"
+   }
+}
+```
+### Update
+A holder can update their DID Document located in the personal data registry through the YourD application. However, when updating the DID Document, it is essential to update the associated metadata on the related blockchain. Any alterations made to the DID Document without a corresponding metadata update on the blockchain are considered invalid by the YourD related DID services.
+### Delete 
+A holder has the ability to delete their DID Document from the private data registry. However, upon deletion of the DID Document, it is necessary to update the metadata on the blockchain network to deactivate the DID.
+
+## Privacy / Security Consideration
+At the heart of YourD's development process lies a robust commitment to privacy and security, anchored firmly within the guidelines set by the DID Specification. Recognizing the potential risks and scalability issues that could surface from uploading DID Documents onto the blockchain, YourD has taken a strategic approach.
+
+Given that the upload of personally identifiable information, such as a service endpoint to a blockchain, poses a significant risk of irreversible data leakage, and could infringe on principles like GDPR's "right to be forgotten", YourD developed an alternative. To mitigate these concerns and provide a secure and accessible environment for users to manage their personal information, YourD offers a private data registry in the form of a YourD application, available on mobile and PC platforms.
+
+YourD's application provides a secure storage facility, or 'lock', safeguarded with AES encryption, for DID Documents and derivative data. To bolster access security, YourD integrates biometric authentication measures, such as facial recognition or fingerprint scanning, for mobile devices.
+
+To ensure users can receive verifiable credentials from trusted Issuers, YourD implements QR code functionality via pre-registered services. Additionally, when submitting verifiable presentations, identifiers are kept secret using zero-knowledge proofs, ensuring sensitive information remains confidential. This approach underscores YourD's commitment to privacy and aligns with the DID Specification's emphasis on user privacy and security.
 ## Reference
+[Decentralized Identifier Resolution (DID Resolution) v0.3](https://www.w3.org/TR/did-core/)<br>
+[DID Specification Registries](https://www.w3.org/TR/did-spec-registries/)<br>
+[Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/)<br>
