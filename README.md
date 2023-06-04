@@ -92,8 +92,8 @@ The YourD DID method supports two functionalities: resolver and dereferencer.
       }
    },
    "contentMetadata":{
-      "created": "20XX-0X-23T0X:XX:XXZ(example)",
-      "updated": "20XX-0X-23T0X:XX:XXZ(example)"
+      "created": "2023-04-19T02:16:00Z",
+      "updated": "2023-04-19T02:16:00Z"
    }
 }
 ```
