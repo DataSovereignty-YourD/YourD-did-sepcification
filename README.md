@@ -47,15 +47,15 @@ The basic structure of a DID document in YourD is as follows:
       {
          "id":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default",
          "type":"EcdsaSecp256k1VerificationKey2019",
-         "controller":"did:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
+         "controller":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
          "publicKeyMultibase":"A_Huy4IDtm0reCw0AgvZ-PbOKXaNpjcLbxCdCK3iBzky"
       }
    ],
    "authentication":[
-      "did:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
+      "did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
    ],
    "assertionMethod":[
-      "did:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
+      "did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
    ]
 }
 ```
