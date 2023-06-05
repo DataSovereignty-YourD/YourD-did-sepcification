@@ -42,7 +42,7 @@ The basic structure of a DID document in YourD is as follows:
       "https://www.w3.org/ns/did/v1",
       "https://ns.did.ai/suites/secp256k1-2019/v1/"
    ],
-   "id":"did:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
+   "id":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
    "verificationMethod":[
       {
          "id":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default",
