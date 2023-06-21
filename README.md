@@ -115,3 +115,4 @@ To ensure users can receive verifiable credentials from trusted Issuers, YourD i
 [DID Specification Registries](https://www.w3.org/TR/did-spec-registries/)<br>
 [Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/)<br>
 [Verifiable Credentail Implementation Guideline](https://w3c.github.io/vc-imp-guide/#web-authentication)<br>
+[DID Identifier Resolution](https://w3c-ccg.github.io/did-resolution/)<br>
