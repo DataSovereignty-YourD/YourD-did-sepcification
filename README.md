@@ -22,6 +22,11 @@ The method identifier in YourD conforms to the format specified by the DID speci
 | Ed25519 keys  | Elliptic Curve Digital Signature Algorithm (EdDSA) based on the Ed25519 curve. |
 | Secp256k1 keys | Elliptic Curve Digital Signature Algorithm (ECDSA) based on the secp256k1 curve. |
 | NIST P256 keys| Elliptic Curve Digital Signature Algorithm (ECDSA) based on the NIST P-256 curve. |
+| BLS12-381 keys | Boneh–Lynn–Shacham (BLS) Signature Scheme based on the BLS12-381 curve. |
+| BLS12-377 | keysBoneh–Lynn–Shacham (BLS) Signature Scheme based on the BLS12-377 curve. |
+
+
+
 
 
 The supported blockchain networks currently include Ed25519 keys, Secp256k1 keys, and NIST P256 keys. These key types are widely utilized in various digital identity protocols and standards, offering robust cryptographic capabilities to establish trusted digital identities.
