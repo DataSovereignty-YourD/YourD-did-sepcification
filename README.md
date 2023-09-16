@@ -28,10 +28,25 @@ The supported blockchain networks currently include Ed25519 keys, Secp256k1 keys
 In a blockchain-based identity management system, these key types can be used as part of a DID to create a unique and secure identifier. A DID represents the digital identity of a specific entity, such as an individual, organization, or asset. It is associated with a blockchain account, enabling identity verification and management of digital asset ownership.
 
 ## Example
+```
+Tezos
+- did:yourd:tezos:mainnet:tz1cYSgk4T76D87d5tDQnmXTDo6mCXJgKVQe
+- did:yourd:tezos:ghostnet:tz1cYSgk4T76D87d5tDQnmXTDo6mCXJgKVQe
+- did:tezos:ghostnet:KT1DT2NZM7ZL7CYSZErQdAYHubrW8WEwAe9h
+```
 
 ```
+Klaytn
 - did:yourd:klaytn:cypress:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58
 - did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58
+- did:klaytn:baobab:0x63d4f17d2a8a729fd050f7679d961b1dfbb1e3af
+```
+
+```
+Aleo
+- did:yourd:aleo:mainnet:aleo1439ejjue9q44ghpdtclhylvgtgntt2yla3235cu3p005rwd6nszqc5clt0
+- did:yourd:aleo:testnet:aleo1439ejjue9q44ghpdtclhylvgtgntt2yla3235cu3p005rwd6nszqc5clt0
+- did:aleo:mainnet:candyMachine.leo
 ```
 ## YourD DID Document
 
@@ -42,20 +57,20 @@ The basic structure of a DID document in YourD is as follows:
       "https://www.w3.org/ns/did/v1",
       "https://ns.did.ai/suites/secp256k1-2019/v1/"
    ],
-   "id":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
+   "id":"did:yourd:chainId:networkId:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
    "verificationMethod":[
       {
-         "id":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default",
+         "id":"did:yourd:chainId:networkId:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default",
          "type":"EcdsaSecp256k1VerificationKey2019",
          "controller":"did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58",
          "publicKeyMultibase":"A_Huy4IDtm0reCw0AgvZ-PbOKXaNpjcLbxCdCK3iBzky"
       }
    ],
    "authentication":[
-      "did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
+      "did:yourd:chainId:networkId:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
    ],
    "assertionMethod":[
-      "did:yourd:klaytn:baobab:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
+      "did:yourd:chainId:networkId:0xA738931B9Dd4019D282D9cf368644fEc52e9ec58#key-default"
    ]
 }
 ```
