@@ -23,7 +23,7 @@ The method identifier in YourD conforms to the format specified by the DID speci
 | Secp256k1 keys | Elliptic Curve Digital Signature Algorithm (ECDSA) based on the secp256k1 curve. |
 | NIST P256 keys| Elliptic Curve Digital Signature Algorithm (ECDSA) based on the NIST P-256 curve. |
 | BLS12-381 keys | Boneh–Lynn–Shacham (BLS) Signature Scheme based on the BLS12-381 curve. |
-| BLS12-377 | keysBoneh–Lynn–Shacham (BLS) Signature Scheme based on the BLS12-377 curve. |
+| BLS12-377 keys | keysBoneh–Lynn–Shacham (BLS) Signature Scheme based on the BLS12-377 curve. |
 
 
 
