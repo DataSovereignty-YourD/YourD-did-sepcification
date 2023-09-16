@@ -31,6 +31,8 @@ The method identifier in YourD conforms to the format specified by the DID speci
 
 The supported blockchain networks currently include Ed25519 keys, Secp256k1 keys, and NIST P256 keys. These key types are widely utilized in various digital identity protocols and standards, offering robust cryptographic capabilities to establish trusted digital identities.
 In a blockchain-based identity management system, these key types can be used as part of a DID to create a unique and secure identifier. A DID represents the digital identity of a specific entity, such as an individual, organization, or asset. It is associated with a blockchain account, enabling identity verification and management of digital asset ownership.
+## Supported Chains
+Aleo, Klaytn, Tezos
 
 ## Example
 ```
